@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def get_chuck_norris_jokes():
 
     api_url = "https://api.chucknorris.io/jokes/random"
