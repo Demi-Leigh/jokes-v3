@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_chuck_norris_jokes():
 
     api_url = "https://api.chucknorris.io/jokes/random"
-    response = requests.get(api_url)
+    response = requests.get(api_url).json()
 
     return "<strong>Chuck Joke: </strong>" + response['value']
 
