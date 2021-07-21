@@ -14,6 +14,15 @@ def get_chuck_norris_jokes():
     return response
 
 
+@app.route('/categories', methods=['GET','POST'])
+def categories():
+
+    api_url = "https://api.chucknorris.io/jokes/categories"
+    response = requests.get(api_url).json()
+    response = str(response)
+    return response
+
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
