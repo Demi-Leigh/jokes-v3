@@ -9,8 +9,9 @@ def get_chuck_norris_jokes():
 
     api_url = "https://api.chucknorris.io/jokes/random"
     response = requests.get(api_url).json()
+    response = str(response)
 
-    return "<strong>Chuck Joke: </strong>" + response['value']
+    return response
 
 
 if __name__ == "__main__":
